@@ -23,6 +23,11 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
+
+    if (project.android.hasProperty("namespace")) {
+        namespace "com.freshchat.consumer.sdk.flutter"
+    }
+
     compileSdkVersion 34
 
     defaultConfig {
